@@ -19,6 +19,7 @@ def getArgs():
     parser.add_argument("--runNumber", dest="runNumber", action="store", default="", help="runNumber")
     parser.add_argument("--joboption", dest="joboption", action="store", default="", help="Job option to run")
     parser.add_argument("--gridpack",   dest="gridpack", action="store", default="", help="gridpack")
+    parser.add_argument("--analysis",   dest="analysis", action="store", default="", help="analysis")
 
     parser.add_argument("--no_sub", dest="no_sub", action="store_true", default=False, help="No submission")
     parser.add_argument("--no_delete", dest="no_delete", action="store_true", default=False, help="No delete")
@@ -83,7 +84,7 @@ def Run(dict_args,JobFolderName="default"):
         else:
             print("Please provide the mass and width of the higgs, and check your job options")
             return
-        
+
         ftw.write("cp config/"+args.analysis+"/"+args.joboption+" "+outputworking+args.analysis+" \n")
         if args.gridpack!="":
             ftw.write("cp -r gridpack/"+args.gridpack+" "+outputworking+"Process\n")
