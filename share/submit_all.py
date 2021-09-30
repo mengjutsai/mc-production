@@ -85,7 +85,7 @@ def Run(dict_args,JobFolderName="default"):
             print("Please provide the mass and width of the higgs, and check your job options")
             return
 
-        ftw.write("cp config/"+args.analysis+"/"+args.joboption+" "+outputworking+args.analysis+" \n")
+        ftw.write("cp config/"+args.analysis+"/"+args.joboption+" "+outputworking+args.analysis+"/"+modified_joboption+" \n")
         if args.gridpack!="":
             ftw.write("cp -r gridpack/"+args.gridpack+" "+outputworking+"Process\n")
 
