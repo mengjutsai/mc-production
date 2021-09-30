@@ -77,10 +77,10 @@ def Run(dict_args,JobFolderName="default"):
         joboption = args.joboption
         if args.analysis=="ttH" and args.mH2!="" and args.wH2!="":
             modified_joboption = joboption.replace('mh2','mh2'+args.mH2)
-            modified_joboption = joboption.replace('wh2','wh2'+args.wH2)
+            modified_joboption = modified_joboption.replace('wh2','wh2'+args.wH2)
         elif args.analysis=="ttA" and args.mH3!="" and args.wH3!="":
             modified_joboption = joboption.replace('mh3','mh3'+args.mH3)
-            modified_joboption = joboption.replace('wh3','wh3'+args.wH3)
+            modified_joboption = modified_joboption.replace('wh3','wh3'+args.wH3)
         else:
             print("Please provide the mass and width of the higgs, and check your job options")
             return
