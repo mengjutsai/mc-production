@@ -82,7 +82,7 @@ def Run(dict_args,JobFolderName="default"):
             modified_joboption = joboption.replace('wh3','wh3'+args.wH3)
         else:
             print("Please provide the mass and width of the higgs, and check your job options")
-            break
+            return
         
         ftw.write("cp config/"+args.analysis+"/"+args.joboption+" "+outputworking+args.analysis+" \n")
         if args.gridpack!="":
